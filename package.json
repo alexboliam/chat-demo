@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "firebase emulators:exec --project=demo-project --ui \"ng serve --no-live-reload\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "emulators": "firebase emulators:start"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +21,9 @@
     "@angular/platform-browser": "18.1.1",
     "@angular/platform-browser-dynamic": "18.1.1",
     "@angular/router": "18.1.1",
+    "firebase": "^10.12.4",
     "ngxtension": "^4.0.0",
+    "rxfire": "^6.0.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
